@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/duvbobruni/Desktop/ScreenDrawer
+CMAKE_SOURCE_DIR = /Users/duvbobruni/Desktop/TerminalDrawer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/duvbobruni/Desktop/ScreenDrawer/build
+CMAKE_BINARY_DIR = /Users/duvbobruni/Desktop/TerminalDrawer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/duvbobruni/Desktop/ScreenDrawer/build/CMakeFiles /Users/duvbobruni/Desktop/ScreenDrawer/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/duvbobruni/Desktop/TerminalDrawer/build/CMakeFiles /Users/duvbobruni/Desktop/TerminalDrawer/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/duvbobruni/Desktop/ScreenDrawer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/duvbobruni/Desktop/TerminalDrawer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ScreenDrawer
+# Target rules for targets named TerminalDrawer
 
 # Build rule for target.
-ScreenDrawer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ScreenDrawer
-.PHONY : ScreenDrawer
+TerminalDrawer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TerminalDrawer
+.PHONY : TerminalDrawer
 
 # fast build rule for target.
-ScreenDrawer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScreenDrawer.dir/build.make CMakeFiles/ScreenDrawer.dir/build
-.PHONY : ScreenDrawer/fast
+TerminalDrawer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerminalDrawer.dir/build.make CMakeFiles/TerminalDrawer.dir/build
+.PHONY : TerminalDrawer/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScreenDrawer.dir/build.make CMakeFiles/ScreenDrawer.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerminalDrawer.dir/build.make CMakeFiles/TerminalDrawer.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScreenDrawer.dir/build.make CMakeFiles/ScreenDrawer.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerminalDrawer.dir/build.make CMakeFiles/TerminalDrawer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScreenDrawer.dir/build.make CMakeFiles/ScreenDrawer.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TerminalDrawer.dir/build.make CMakeFiles/TerminalDrawer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ScreenDrawer"
+	@echo "... TerminalDrawer"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

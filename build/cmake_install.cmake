@@ -1,4 +1,4 @@
-# Install script for directory: /Users/duvbobruni/Desktop/ScreenDrawer
+# Install script for directory: /Users/duvbobruni/Desktop/TerminalDrawer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/duvbobruni/Desktop/ScreenDrawer/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/duvbobruni/Desktop/TerminalDrawer/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

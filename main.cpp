@@ -72,9 +72,9 @@ int main(int argc, char **argv)
             betweenMandS = ":";
         }
         moveCursorToRowCol(row, col);
-        // std::cout << "\033[0;91;104m" + std::to_string(time[0]) + betweenMandS + std::to_string(time[1]) + "\033[0;91;40m";
-        std::cout << "\033[0;91;104m"
-                  << "x: " << directionIsLeft << " y: " << directionIsUp << "\033[0;91;40m";
+        std::cout << "\033[0;91;104m" + std::to_string(time[0]) + betweenMandS + std::to_string(time[1]) + "\033[0;91;40m";
+        // std::cout << "\033[0;91;104m"
+        //           << "x: " << directionIsLeft << " y: " << directionIsUp << "\033[0;91;40m";
 
         std::string line2 = "\033[8m" + repeat("█", windowSize[0]);
         std::cout << line2 << std::endl;

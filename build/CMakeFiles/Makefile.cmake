@@ -80,7 +80,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
-  "/Users/duvbobruni/Desktop/ScreenDrawer/CMakeLists.txt"
+  "/Users/duvbobruni/Desktop/TerminalDrawer/CMakeLists.txt"
   "CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
   )
@@ -101,5 +101,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ScreenDrawer.dir/DependInfo.cmake"
+  "CMakeFiles/TerminalDrawer.dir/DependInfo.cmake"
   )
