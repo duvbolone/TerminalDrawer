@@ -6,16 +6,20 @@
 
 int main(int argc, const char **argv)
 {
+    bool paramMode = false;
+    std::string mode;
     if (containsArg(argc, argv, "--no-start"))
     {
+        paramMode = true;
         std::cout << "\t\033[32mStarting...\033[0m" << std::endl;
         usleep(1000000);
     }
     else
     {
-        std::string bars = repeat("=", (getWindowSize()[0] / 2) - 8);
-        std::cout << "\033[36m\033[?25h" + bars + "||\033[31mScreenDrawer\033[36m||" + bars + "\033[0m" << std::endl;
-        std::cout << "\t Welcome to \033[1mScreenDrawer\033[0m" << std::endl;
+        paramMode = false;
+        std::string bars = repeat("=", (getWindowSize()[0] / 2) - 9);
+        std::cout << "\033[36m\033[?25h" + bars + "||\033[31mTerminalDrawer\033[36m||" + bars + "\033[0m" << std::endl;
+        std::cout << "\t Welcome to \033[1mTerminalDrawer\033[0m" << std::endl;
         std::cout << "" << std::endl;
         std::cout << "\t Would you like to start the draw process? \033[93m(this will clear the terminal!)\033[0m (Y/N)";
 
@@ -23,6 +27,8 @@ int main(int argc, const char **argv)
         std::cin >> startDrawer;
         if (startDrawer == 'Y' or startDrawer == 'y')
         {
+            std::cout << "\t What mode would you like to start in?\033[0m (csv, clock)";
+            std::cin >> mode;
             std::cout << "\t\033[32mStarting...\033[0m" << std::endl;
             usleep(1000000);
         }
@@ -32,12 +38,24 @@ int main(int argc, const char **argv)
         }
     }
 
-    if (containsArg(argc, argv, "--csv"))
+    if (paramMode)
     {
-        csvDrawer();
-    }
-    if (containsArg(argc, argv, "--clock"))
-    {
-        clockDrawer();
+        if (containsArg(argc, argv, "--csv"))
+        {
+            csvDrawer();
+        }
+        if (containsArg(argc, argv, "--clock"))
+        {
+            clockDrawer();
+        }
+    } else {
+        if (mode == "csv")
+        {
+            csvDrawer();
+        }
+        if (mode == "clock")
+        {
+            clockDrawer();
+        }
     }
 }
