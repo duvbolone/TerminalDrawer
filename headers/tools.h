@@ -1,11 +1,13 @@
+#ifndef TOOLS_H
+#define TOOLS_H
+
 #include <sys/ioctl.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <iostream>
 #include <string>
 
-#ifndef TOOLS_H
-#define TOOLS_H
+
 void clearScreen()
 {
     std::system("clear && printf '\033[3J'");
@@ -23,7 +25,7 @@ int *getWindowSize()
     return size;
 }
 
-void moveCursorToRowCol(int row = 0, int col = 0)
+void moveCursorToColRow(int col = 0, int row = 0)
 {
     std::cout << "\033[" << row << ";" << col << "H";
 }
@@ -43,6 +45,35 @@ std::string repeat(const std::string &str, int count)
     }
 
     return result;
+}
+
+std::string lstrip(const std::string& str)
+{
+    size_t start = str.find_first_not_of(" \t\r\n");
+    if (start != std::string::npos)
+    {
+        return str.substr(start);
+    }
+    return str;
+}
+
+bool containsString(const char *mainStr, const char *subString)
+{
+    std::string strObj(mainStr);
+    std::string::size_type pos = strObj.find(subString);
+    return pos != std::string::npos;
+}
+
+bool containsArg(int arg_count, const char *args[], char sub_string[])
+{
+    for (int i = 0; i < arg_count; i++)
+    {
+        if (containsString(args[i], sub_string))
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 #endif
