@@ -64,7 +64,7 @@ bool containsString(const char *mainStr, const char *subString)
     return pos != std::string::npos;
 }
 
-bool containsArg(int arg_count, const char *args[], char sub_string[])
+bool containsArg(int arg_count, const char *args[], const char sub_string[])
 {
     for (int i = 0; i < arg_count; i++)
     {
