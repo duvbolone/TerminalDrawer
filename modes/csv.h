@@ -23,17 +23,24 @@ void csvDrawer() {
 
         for (int i = 0; i < arr.size(); ++i)
         {
-            moveCursorToColRow(std::stoi(arr[i][0]), std::stoi(arr[i][1]));
-            std::cout << "\033[0;91;104m"
-                      << lstrip(arr[i][2])
-                      << "\033[0;91;40m";
+            if (arr[i].size() < 3)
+            {
+                continue;
+            } 
+            else
+            {
+                moveCursorToColRow(std::stoi(arr[i][0]), std::stoi(arr[i][1]));
+                std::cout << "\033[0;91m"
+                        << lstrip(arr[i][2])
+                        << "\033[0;91;40m";
+            }
         }
 
-        std::string line2 = "\033[8m" + repeat("█", windowSize[0]);
-        std::cout << line2 << std::endl;
+        // std::string line2 = "\033[8m" + repeat("█", windowSize[0]);
+        // std::cout << line2 << std::endl;
 
         // in microseconds even tho param says seconds...
-        usleep(5000000);
+        usleep(2000000);
         clearScreen();
     }
 }
