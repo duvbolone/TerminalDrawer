@@ -11,7 +11,10 @@ void csvDrawer() {
 
     while (true)
     {
-        std::vector<std::vector<std::string> > arr = readAndOutputFile("test.csv");
+        std::string file;
+        std::cout << "\t What csv file would you like to use?\033[0m (*.csv)";
+        std::cin >> file;
+        std::vector<std::vector<std::string> > arr = readAndOutputFile(file);
         int *windowSize = getWindowSize();
         std::string line = "\033[8;40m" + repeat("█", windowSize[0]) + "\n";
         std::string fullScreen = repeat(line, windowSize[1]);
@@ -36,8 +39,8 @@ void csvDrawer() {
             }
         }
 
-        // std::string line2 = "\033[8m" + repeat("█", windowSize[0]);
-        // std::cout << line2 << std::endl;
+        std::string line2 = "\033[8m" + repeat("█", windowSize[0]);
+        std::cout << line2 << std::endl;
 
         // in microseconds even tho param says seconds...
         usleep(2000000);
