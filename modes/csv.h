@@ -4,46 +4,52 @@
 #include "../headers/tools.h"
 #include "../headers/csvparser.h"
 
-void csvDrawer() {
+void csvDrawer(int argc, const char **argv)
+{
+    std::string file;
+    std::cout << "\t What csv file would you like to use?\033[0m (*.csv)";
+    std::cin >> file;
+
     std::cout << "\033[?25l" << std::endl;
 
     clearScreen();
 
+    int cycle = 0;
     while (true)
     {
-        std::string file;
-        std::cout << "\t What csv file would you like to use?\033[0m (*.csv)";
-        std::cin >> file;
-        std::vector<std::vector<std::string> > arr = readAndOutputFile(file);
+        std::vector<std::vector<std::string>> arr = readAndOutputFile(file);
         int *windowSize = getWindowSize();
         std::string line = "\033[8;40m" + repeat("█", windowSize[0]) + "\n";
         std::string fullScreen = repeat(line, windowSize[1]);
         std::cout << fullScreen;
-        moveCursorToColRow(std::stoi(arr[0][0]), std::stoi(arr[0][1]));
-        std::cout << "\033[0;91;104m"
-                  << lstrip(arr[0][2])
-                  << "\033[0;91;40m";
 
         for (int i = 0; i < arr.size(); ++i)
         {
             if (arr[i].size() < 3)
             {
                 continue;
-            } 
+            }
             else
             {
                 moveCursorToColRow(std::stoi(arr[i][0]), std::stoi(arr[i][1]));
                 std::cout << "\033[0;91m"
-                        << lstrip(arr[i][2])
-                        << "\033[0;91;40m";
+                          << lstrip(arr[i][2])
+                          << "\033[0;91;40m";
             }
         }
+
+        moveCursorToColRow(2, 0);
+        std::cout << "\033[0m"
+                  << "Status -  cycle: \033[1;92m" << cycle << "\033[0m"
+                  << " - one cycle every \033[1;92m2 \033[0msecond"
+                  << "\033[0;40m";
 
         std::string line2 = "\033[8m" + repeat("█", windowSize[0]);
         std::cout << line2 << std::endl;
 
         // in microseconds even tho param says seconds...
         usleep(2000000);
+        cycle++;
         clearScreen();
     }
 }
