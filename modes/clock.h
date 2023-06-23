@@ -58,6 +58,7 @@ void clockDrawer(int argc, const char **argv)
             std::cout << "\033[0m"
                       << "\033[1mStatus\033[0m -  cycle: \033[1;92m" << cycle << "\033[0m - u: \033[1;92m" << directionIsUp << "\033[0m l: \033[1;92m" << directionIsLeft
                       << "\033[0m - row: \033[1;92m" << row << "\033[0m - col: \033[1;92m" << col
+                      << "\033[0m - wsize: \033[1;92m" << windowSize[0] << "\033[0m x \033[1;92m" << windowSize[1]
                       << "\033[0;40m";
         }
 
