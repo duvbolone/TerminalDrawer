@@ -4,11 +4,12 @@
 #include "../headers/tools.h"
 #include <string>
 
-void clockDrawer() {
+void clockDrawer(int argc, const char **argv)
+{
     bool directionIsUp = false;
     bool directionIsLeft = false;
-    int row = 1;
     int col = 1;
+    int row = 1;
     int time[] = {0, 0}; // minutes, seconds
     std::string betweenMandS;
 
@@ -16,6 +17,7 @@ void clockDrawer() {
 
     clearScreen();
 
+    int cycle = 0;
     while (true)
     // for (int i = 0; i < 5; i++)
     {
@@ -49,7 +51,17 @@ void clockDrawer() {
         {
             betweenMandS = ":";
         }
-        moveCursorToColRow(row, col);
+
+        if (containsArg(argc, argv, "-s"))
+        {
+            moveCursorToColRow(2, 0);
+            std::cout << "\033[0m"
+                      << "\033[1mStatus\033[0m -  cycle: \033[1;92m" << cycle << "\033[0m - u: \033[1;92m" << directionIsUp << "\033[0m l: \033[1;92m" << directionIsLeft
+                      << "\033[0m - row: \033[1;92m" << row << "\033[0m - col: \033[1;92m" << col
+                      << "\033[0;40m";
+        }
+
+        moveCursorToColRow(col, row);
         std::cout << "\033[0;91;104m" + std::to_string(time[0]) + betweenMandS + std::to_string(time[1]) + "\033[0;91;40m";
         // std::cout << "\033[0;91;104m"
         //           << "x: " << directionIsLeft << " y: " << directionIsUp << "\033[0;91;40m";
@@ -62,8 +74,6 @@ void clockDrawer() {
             time[1] = 0;
             time[0]++;
         }
-        col++;
-        col++;
         if (directionIsUp)
         {
             row--;
@@ -82,8 +92,8 @@ void clockDrawer() {
         }
 
         // in microseconds even tho param says seconds...
-        // usleep(1000000);
         usleep(1000000);
+        cycle++;
         clearScreen();
     }
 }

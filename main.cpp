@@ -46,7 +46,7 @@ int main(int argc, const char **argv)
         }
         if (containsArg(argc, argv, "--clock"))
         {
-            clockDrawer();
+            clockDrawer(argc, argv);
         }
     } else {
         if (mode == "csv")
@@ -55,7 +55,7 @@ int main(int argc, const char **argv)
         }
         if (mode == "clock")
         {
-            clockDrawer();
+            clockDrawer(argc, argv);
         }
     }
 }

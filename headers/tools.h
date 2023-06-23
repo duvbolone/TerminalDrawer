@@ -27,7 +27,7 @@ int *getWindowSize()
 
 void moveCursorToColRow(int col = 0, int row = 0)
 {
-    std::cout << "\033[" << row << ";" << col << "H";
+    std::cout << "\033[" << row << ";" << col << "H ";
     std::cout.flush();  // Ensure the cursor position is updated immediately
 }
 
