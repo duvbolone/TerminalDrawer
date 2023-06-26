@@ -1,7 +1,7 @@
 #ifndef CLOCK_H
 #define CLOCK_H
 
-#include "../include/tools.h"
+#include "../include/terminal.h"
 #include <string>
 
 void clockDrawer(int argc, const char **argv)
@@ -54,7 +54,7 @@ void clockDrawer(int argc, const char **argv)
 
         if (containsArg(argc, argv, "-s"))
         {
-            moveCursorToColRow(2, 0);
+            moveCursorToColRow(0, 0);
             std::cout << "\033[0m"
                       << "\033[1mStatus\033[0m -  cycle: \033[1;92m" << cycle << "\033[0m - u: \033[1;92m" << directionIsUp << "\033[0m l: \033[1;92m" << directionIsLeft
                       << "\033[0m - row: \033[1;92m" << row << "\033[0m - col: \033[1;92m" << col

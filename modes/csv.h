@@ -1,7 +1,7 @@
 #ifndef CSV_H
 #define CSV_H
 
-#include "../include/tools.h"
+#include "../include/terminal.h"
 #include "../include/csvparser.h"
 
 void csvDrawer(int argc, const char **argv)
@@ -25,7 +25,7 @@ void csvDrawer(int argc, const char **argv)
 
         if (containsArg(argc, argv, "-s"))
         {
-            moveCursorToColRow(2, 0);
+            moveCursorToColRow(0, 0);
             std::cout << "\033[0m"
                       << "\033[1mStatus\033[0m -  cycle: \033[1;92m" << cycle << "\033[0m"
                       << " - one cycle every \033[1;92m2 \033[0msecond"

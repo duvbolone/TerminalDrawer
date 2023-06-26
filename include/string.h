@@ -25,10 +25,32 @@ std::string lstrip(const std::string& str)
     return str;
 }
 
+std::vector<std::string> split(std::string string, const std::string delim) {
+    std::vector<std::string> splitted;
+
+    std::string buffer;
+
+    if (string[string.length() - 1] != '/') {
+        string += "/";
+    }
+
+    for (int i = 0; i < string.length(); i++) {
+        if (string[i] == '/') {
+            splitted.push_back(buffer);
+            buffer = "";
+        } else {
+            buffer += string[i];
+        }
+    }
+
+    return splitted;
+}
+
 bool containsString(const char *mainStr, const char *subString)
 {
     std::string strObj(mainStr);
     std::string::size_type pos = strObj.find(subString);
     return pos != std::string::npos;
 }
+
 #endif
