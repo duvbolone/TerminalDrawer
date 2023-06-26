@@ -1,8 +1,8 @@
 #ifndef CSV_H
 #define CSV_H
 
-#include "../headers/tools.h"
-#include "../headers/csvparser.h"
+#include "../include/tools.h"
+#include "../include/csvparser.h"
 
 void csvDrawer(int argc, const char **argv)
 {

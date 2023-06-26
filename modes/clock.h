@@ -1,7 +1,7 @@
 #ifndef CLOCK_H
 #define CLOCK_H
 
-#include "../headers/tools.h"
+#include "../include/tools.h"
 #include <string>
 
 void clockDrawer(int argc, const char **argv)
