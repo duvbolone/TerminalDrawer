@@ -1,5 +1,5 @@
 
-## `-s`
+## `--status`
 
 Enables the status bar.
 

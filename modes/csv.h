@@ -12,18 +12,17 @@ void csvDrawer(int argc, const char **argv)
 
     std::cout << "\033[?25l" << std::endl;
 
-    clearScreen();
-
     int cycle = 0;
     while (true)
     {
+        clearScreen();
         std::vector<std::vector<std::string>> arr = readAndOutputFile(file);
         int *windowSize = getWindowSize();
         std::string line = "\033[8;40m" + repeat("█", windowSize[0]) + "\n";
         std::string fullScreen = repeat(line, windowSize[1]);
         std::cout << fullScreen;
 
-        if (containsArg(argc, argv, "-s"))
+        if (containsArg(argc, argv, "--status"))
         {
             moveCursorToColRow(0, 0);
             std::cout << "\033[0m"
@@ -52,9 +51,8 @@ void csvDrawer(int argc, const char **argv)
         std::cout << line2 << std::endl;
 
         // in microseconds even tho param says seconds...
-        usleep(2000000);
+        usleep(200000);
         cycle++;
-        clearScreen();
     }
 }
 #endif

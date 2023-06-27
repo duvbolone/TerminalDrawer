@@ -20,7 +20,7 @@ TerminalDrawer --no-start --csv
 ```
 
 ![CSV Mode preview](images/csv.png)
-*The status bar was enabled with the `-s` option*
+*The status bar was enabled with the `--status` option*
 
 <br>
 <br>

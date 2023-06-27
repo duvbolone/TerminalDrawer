@@ -52,7 +52,7 @@ void clockDrawer(int argc, const char **argv)
             betweenMandS = ":";
         }
 
-        if (containsArg(argc, argv, "-s"))
+        if (containsArg(argc, argv, "--status"))
         {
             moveCursorToColRow(0, 0);
             std::cout << "\033[0m"
