@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://duvbolone.github.io/TerminalDrawer/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://duvbolone.github.io/TerminalDrawer/building/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://duvbolone.github.io/TerminalDrawer/modes/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://duvbolone.github.io/TerminalDrawer/options/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
