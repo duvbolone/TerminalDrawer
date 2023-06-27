@@ -5,7 +5,4 @@
 
 Draws stuff in your terminal.
 
-## Current Modes
-
-- **csv (--csv)** : gets points from a csv file and draws them. Format should be `X, Y, name`
-- **clock (--clock)** : counts up and moves around
+Documentation: https://duvbolone.github.io/TerminalDrawer
