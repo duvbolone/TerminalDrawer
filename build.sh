@@ -1,4 +1,4 @@
 cd build
 rm -rf `ls -Ab`
-cmake ..
+cmake -D CMAKE_CXX_COMPILER=g++ ..
 make

@@ -16,9 +16,9 @@ For example, the following file will draw a simple point at the column 10, row 1
 
 So in the terminal type:
 
-```sh
+```zsh
 TerminalDrawer --no-start --csv
-    What csv file would you like to use? (*.csv) {enter name of file here}
+    #What csv file would you like to use? (*.csv) {enter name of file here}
 ```
 
 ![CSV Mode preview](images/csv.png)

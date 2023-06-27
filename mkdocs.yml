@@ -1,12 +1,24 @@
 site_name: 'TerminalDrawer'
 site_url: https://duvbolone.github.io/TerminalDrawer
+repo_url: https://github.com/duvbolone/TerminalDrawer
 site_description: 'TerminalDrawer Documentation'
 site_author: 'Matt3o0'
 theme:
-  name: 'terminal'
-  palette: 'dark'
+  font:
+    text: Roboto Mono
+  name: 'material'
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
   features:
-    - navigation.side.indexes
     - footer.prev_next
     - revision.date
     - revision.history
@@ -15,7 +27,8 @@ plugins:
   - git-revision-date
 
 markdown_extensions:
-  - fenced_code
+  - pymdownx.highlight
+  - pymdownx.superfences
   - toc:
       permalink: "#"
 nav:
