@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install -U git+https://github.com/mkdocs/mkdocs.git#egg=mkdocs
-      - run: pip install mkdocs-terminal
+      - run: pip install mkdocs-material
       - run: pip install mkdocs-git-revision-date-plugin
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy
       - run: mkdocs --version
