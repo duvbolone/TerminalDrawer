@@ -18,19 +18,12 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
-  features:
-    - footer.prev_next
-    - revision.date
-    - revision.history
-
-plugins:
-  - git-revision-date
-
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - toc:
       permalink: "#"
+      
 nav:
   - Home: index.md
   - Building: building.md

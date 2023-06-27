@@ -1,10 +1,8 @@
-# Different Modes
-
 TerminalDrawer offers 2 modes to run in. [**CSV**](#csv-mode) mode and [**Clock**](#clock-mode) mode.
 
 ---
 
-# CSV Mode
+## CSV Mode
 
 The CSV mode allow you to draw points in the terminal from a CSV file.
 
