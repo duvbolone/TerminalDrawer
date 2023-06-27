@@ -1,0 +1,25 @@
+site_name: 'TerminalDrawer'
+site_url: https://duvbolone.github.io/TerminalDrawer
+site_description: 'TerminalDrawer Documentation'
+site_author: 'Matt3o0'
+theme:
+  name: 'terminal'
+  palette: 'dark'
+  features:
+    - navigation.side.indexes
+    - footer.prev_next
+    - revision.date
+    - revision.history
+
+plugins:
+  - git-revision-date
+
+markdown_extensions:
+  - fenced_code
+  - toc:
+      permalink: "#"
+nav:
+  - Home: index.md
+  - Building: building.md
+  - Modes: modes.md
+  - Options: options.md

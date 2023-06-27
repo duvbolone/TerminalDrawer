@@ -1,0 +1,22 @@
+name: docs 
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install -U git+https://github.com/mkdocs/mkdocs.git#egg=mkdocs
+      - run: pip install mkdocs-terminal
+      - run: pip install mkdocs-git-revision-date-plugin
+      - run: mkdocs gh-deploy --force
+      - run: mkdocs --version
